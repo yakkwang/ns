@@ -2,7 +2,7 @@
 
 - GEETEST是一种滑动验证码。用户通过拖动滑块至图片空缺位置即可通过验证。
 
-![t](/img/example.png)
+![](img/example.png)
 
 ## 优势 ##
 
@@ -27,7 +27,7 @@
      - 客户端服务器使用SDK二次验证
      - 给出页面响应操作
 
-![](/img/connect.png)
+![](img/connect.png)
 
 - 在用户表单提交时，会额外提交三个字段，分别是 **geetest_challenge**, **geetest_validate**, **geetest_seccode**, 利用这三个字段，可以重新核对操作是否合法。
 
@@ -47,15 +47,15 @@
  
              - 验证图片 https://static.geetest.com/pictures/gt/ec93bce96/bg/4fe853147.webp
              
-            ![](/img/bgbreak.png)
+            ![](img/bgbreak.PNG)
             
              - 每一小块图片的偏移量
 
-            ![](img/position.png)
+            ![](img/position.PNG)
 
 - 模拟稍微移动滑动按钮，触发滑块出现。此时的图片存在滑块阴影空缺。保存，名为bg
 
-![](/img/bg.png)
+![](img/bg.png)
 
 - 比较两图片的像素差异即可得到最终滑块最终停止位置
 
@@ -72,6 +72,8 @@
     
     - 例，用以下代码进行模拟。摘自[破解极验(geetest)验证码-CSDN](http://blog.csdn.net/paololiu/article/details/52514504)
 
+     ```java 
+    
     # 鼠标点击元素并按住不放
     print "第一步,点击元素"
     ActionChains(driver).click_and_hold(on_element=element).perform()
@@ -101,6 +103,8 @@
     print "第三步，释放鼠标"
     # 释放鼠标
     ActionChains(driver).release(on_element=element).perform()
+    
+    ```
 
 
 
